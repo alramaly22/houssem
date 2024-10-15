@@ -236,26 +236,7 @@ let lang = {
         cardtitle3: "Pay With AL ANSARI EXCHANGE Transfer The Fees To",
         cardtitle2: "STEP 1",
         cardtitle1: "AL ANSARI EXCHANGE",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
-        nav1: "",
+
     }
 };
 
@@ -278,28 +259,12 @@ function updateLanguage() {
             node.textContent = lang[language][key];
         }
 
+        // إضافة الفئات بناءً على اللغة المختارة
         if (language === 'ar') {
             node.classList.remove('english-font');
             node.classList.add('arabic-font');
         } else {
             node.classList.remove('arabic-font');
-            node.classList.add('english-font');
-        }
-
-        // إضافة الفئة الإضافية هنا (مثل 'second-arabic-font') إذا كان ذلك مطلوبًا
-        // وتبديلها بناءً على اللغة المحددة بنفس الطريقة
-        if (language === 'ar') {
-            node.classList.remove('english-font');
-            node.classList.add('second-arabic-font');
-        } else {
-            node.classList.remove('second-arabic-font');
-            node.classList.add('english-font');
-        }
-        if (language === 'ar') {
-            node.classList.remove('english-font');
-            node.classList.add('se-arab');
-        } else {
-            node.classList.remove('se-arab');
             node.classList.add('english-font');
         }
     });
@@ -314,6 +279,7 @@ function updateLanguage() {
         trandingSection.style.direction = 'ltr';
         trandingSection.style.textAlign = 'left';
     }
+
     let projectsSection = document.getElementById('travel');
     if (projectsSection) {
         projectsSection.style.direction = 'ltr';
@@ -325,6 +291,4 @@ function updateLanguage() {
         testimonialSection.style.direction = 'ltr';
         testimonialSection.style.textAlign = 'left';
     }
-
-
 }
