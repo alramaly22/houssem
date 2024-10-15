@@ -16,7 +16,7 @@
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!--=============== AOS ===============-->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/styles.css">
     <style>
@@ -135,7 +135,7 @@
     <!--==================== MAIN ====================-->
     <main class="main">
         <!--==================== HOME ====================-->
-        <section class="home3" id="home">
+        <section class="home3" id="home" data-aos="fade-right">
             <img src="img/background.png" alt="" class="home__img3">
             <img src="img/89.jpeg" alt="" class="home__img3-small">
             <div class="video2-overlay"></div>
@@ -147,8 +147,8 @@
             </div>
         </section>
         <!--==================== SERV ====================-->
-        <section class="serv section" id="serv">
-            <h2 class="section__title" data-lang="serv1">How to Get Started</h2>
+        <section class="serv section" id="serv" data-aos="fade-right">
+            <h2 class="section__title">How to Get Started</h2>
             <div class="serv__container container grid">
                 <!-- Step 1 -->
                 <article class="serv__card">
@@ -348,7 +348,7 @@
             </div>
         </section>
         <!--==================== Transformation ====================-->
-        <section class="new section" id="new">
+        <section class="new section" id="new" data-aos="fade-right">
             <h2 class="section__title" data-lang="transformation">
                 Transformations & Triumphs
             </h2>
@@ -397,8 +397,8 @@
             </div>
         </section>
         <!--==================== CONTACT ====================-->
-        <section class="contact section " id="contact">
-            <h2 class="section__title" data-lang="contact">Contact Me</h2>
+        <section class="contact section " id="contact" data-aos="fade-right">
+            <h2 class="section__title">Contact Me</h2>
             <div class="contact__container container grid">
                 <form action="" class="contact__form grid" id="contact-form">
                     <div class="contact__group grid">
@@ -468,15 +468,28 @@
     <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js "></script>
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js "></script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js "></script>
 
-    <!-- <script>
+    <script>
         AOS.init({
             offset: 200,
             duration: 1500
         });
-    </script> -->
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function() {
+            loader.style.display = "none";
+        });
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function() {
+            loader.style.display = "none";
+        });
+    </script>
 </body>
 
 </html>
