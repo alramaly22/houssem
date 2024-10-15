@@ -19,7 +19,44 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/styles.css">
-
+    <style>
+        #language-selector {
+            appearance: none;
+            font-weight: bolder;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-size: cover;
+            background-position: center;
+            color: var(--body-color);
+            border: none;
+            background: var(--first-color);
+            padding: 10px;
+            border-radius: 1rem 0;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        #language-selector option {
+            color: #000;
+        }
+        /* تحديد مكان النص للغة العربية فقط */
+        
+        .arabic-font {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .second-arabic-font {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .se-arab {
+            direction: rtl;
+            text-align: center;
+        }
+    </style>
     <title>Houssem Den D</title>
 </head>
 
@@ -35,28 +72,28 @@
                     <li class="nav__item">
                         <a href="index.html#home" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Home</span>
+                            <span data-lang="nav1">Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="index.html#about" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>About</span>
+                            <span data-lang="nav2">About</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="index.html" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Pricing</span>
+                            <span data-lang="nav4">Pricing</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="index.html#contact" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Contact</span>
+                            <span data-lang="nav5">Contact</span>
                         </a>
                     </li>
                 </ul>
@@ -82,6 +119,11 @@
             </div>
 
             <!-- Toggle button -->
+            <select name="" id="language-selector">
+                <i class="fa-solid fa-earth-oceania"></i>
+                <option value="en" selected>En</option>
+                <option value="ar">Ar</option>
+            </select>
             <div class="nav_toggle" id="nav-toggle">
                 <i class="ri-door-closed-line"></i>
             </div>
@@ -97,19 +139,20 @@
                     <div class="card__scale-2"></div>
                     <img src="img/1024.png" alt="card image" class="card__img">
                     <div class="card__data">
-                        <h2 class="card__title">AL ANSARI EXCHANGE</h2>
-                        <h4 class="stepes">STEP 1</h4>
-                        <p class="card__description">
+                        <h2 class="card__title" data-lang="cardtitle1">AL ANSARI EXCHANGE</h2>
+                        <h4 class="stepes" data-lang="cardtitle2">STEP 1</h4>
+                        <p class="card__description" data-lang="cardtitle3">
                             Pay With AL ANSARI EXCHANGE Transfer The Fees To
                         </p>
                         <p class="mohemgdan">4788399997479288</p>
 
-                        <h4 class="stepes">STEP 2</h4>
-                        <p class="card__description">Take A Screenshot</p>
-                        <h4 class="stepes">STEP 3</h4>
-                        <p class="card__description">SEND SCREENSHOOT</p>
+                        <h4 class="stepes" data-lang="cardtitle4">STEP 2</h4>
+                        <p class="card__description" data-lang="cardtitle5">Take A Screenshot</p>
+                        <h4 class="stepes" data-lang="cardtitle6">STEP 3</h4>
+                        <p class="card__description" data-lang="cardtitle7">SEND SCREENSHOOT</p>
                         <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
-                            <i class="ri-whatsapp-line whatsapp-icon"></i> Chat with us
+                            <i class="ri-whatsapp-line whatsapp-icon"></i>
+                            <p data-lang="cardtitle16">Chat with us</p>
                         </a>
 
                     </div>
@@ -123,20 +166,21 @@
                     <img src="img/Western Union.png" alt="card image" class="card__img">
 
                     <div class="card__data">
-                        <h2 class="card__title">Western Union</h2>
-                        <h4 class="stepes">STEP 1</h4>
-                        <p class="card__description">
-                            Pay With <span class="wastern">Western Union</span> Transfer The Fees To
+                        <h2 class="card__title" data-lang="cardtitle8">Western Union</h2>
+                        <h4 class="stepes" data-lang="cardtitle9">STEP 1</h4>
+                        <p class="card__description" data-lang="cardtitle10">
+                            Pay With Western Union Transfer The Fees To
                         </p>
-                        <p class="mohemgdan">Houssem Ben Dhifallah</p>
+                        <p class="mohemgdan" data-lang="cardtitle11">Houssem Ben Dhifallah</p>
 
-                        <h4 class="stepes">STEP 2</h4>
-                        <p>Take A Screenshot</p>
-                        <h4 class="stepes">STEP 3</h4>
-                        <p class="card__description">SEND SCREENSHOOT</p>
+                        <h4 class="stepes" data-lang="cardtitle12">STEP 2</h4>
+                        <p data-lang="cardtitle13">Take A Screenshot</p>
+                        <h4 class="stepes" data-lang="cardtitle14">STEP 3</h4>
+                        <p class="card__description" data-lang="cardtitle15">SEND SCREENSHOOT</p>
 
                         <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-button">
-                            <i class="ri-whatsapp-line whatsapp-icon"></i> Chat with us
+                            <i class="ri-whatsapp-line whatsapp-icon"></i>
+                            <p data-lang="cardtitle16">Chat with us</p>
                         </a>
                     </div>
                 </article>
@@ -156,6 +200,7 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="js/main.js "></script>
+    <script src="js/language.js"></script>
     <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js "></script>
