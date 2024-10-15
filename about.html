@@ -19,11 +19,50 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/styles.css">
-
+    <style>
+        #language-selector {
+            appearance: none;
+            font-weight: bolder;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-size: cover;
+            background-position: center;
+            color: var(--body-color);
+            border: none;
+            background: var(--first-color);
+            padding: 10px;
+            border-radius: 1rem 0;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        #language-selector option {
+            color: #000;
+        }
+        /* تحديد مكان النص للغة العربية فقط */
+        
+        .arabic-font {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .second-arabic-font {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .se-arab {
+            direction: rtl;
+            text-align: center;
+        }
+    </style>
     <title>Houssem Den D</title>
 </head>
 
 <body>
+    <div id="preloader">
+    </div>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -35,28 +74,28 @@
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Home</span>
+                            <span data-lang="nav1">Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#abo" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>About</span>
+                            <span data-lang="nav2">About</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#clients" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Clients</span>
+                            <span data-lang="nav6">Clients</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#faqs" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Faqs</span>
+                            <span data-lang="nav7">Faqs</span>
                         </a>
                     </li>
                 </ul>
@@ -82,6 +121,11 @@
             </div>
 
             <!-- Toggle button -->
+            <select name="" id="language-selector">
+                <i class="fa-solid fa-earth-oceania"></i>
+                <option value="en" selected>En</option>
+                <option value="ar">Ar</option>
+            </select>
             <div class="nav_toggle" id="nav-toggle">
                 <i class="ri-door-closed-line"></i>
             </div>
@@ -94,33 +138,47 @@
         <section class="home section" id="home">
             <div class="video-container">
                 <video class="home__video" autoplay muted loop>
-                    <source src="video/per2.mp4" type="video/mp4" type="video/mp4">
+                    <source src="video/vi2.mp4" type="video/mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay"></div>
             </div>
             <img src="img/home-lines-bg.svg" alt="" class="home__lines">
             <div class="home__container container grid">
                 <div class="home__content grid">
-                    <h1 class="home__title"> Transform your physique and mindset with Hussam Farouk </h1>
+                    <h1 class="home__title" data-lang="home21">
+                        Unleash your true potential with Hussam Farouk
+                    </h1>
+                    <!-- <p class="home__description">
+                        With Hussam Farouk, elite trainer and bodybuilding expert, elevate your performance and achieve new heights in your fitness journey
+                    </p> -->
                     <div class="home__buttons">
-                        <a href="pricing.html" class="button">Start</a>
+                        <a href="pricing.html" class="button" data-lang="button3">Our Services</a>
 
                     </div>
                     <div class="home__info">
                         <div>
                             <h3 class="home__info-title">+29</h3>
                             <p class="home__info-description">
-                                Years of <br> Experience
+                                <p class="home__info-description" data-lang="homep1">Years of</p>
+                                <p class="home__info-description" data-lang="homep2">Experience</p>
                             </p>
                         </div>
                         <div>
-                            <h3 class="home__info-title">Bronze</h3>
+                            <h3 class="home__info-title" data-lang="homeh31">Gold</h3>
                             <p class="home__info-description">
-                                Mr. Olympia Masters <br> 212 Medal
+                                <p class="home__info-description" data-lang="homep3">Mr. Olympia Masters</p>
+                                <p class="home__info-description" data-lang="homep4">Open Weight Title</p>
                             </p>
                         </div>
-
+                        <div>
+                            <h3 class="home__info-title" data-lang="homeh32">Bronze</h3>
+                            <p class="home__info-description">
+                                <p class="home__info-description" data-lang="homep5">Mr. Olympia Masters</p>
+                                <p class="home__info-description" data-lang="homep6"> 212 Medal</p>
+                            </p>
+                        </div>
                     </div>
+
                 </div>
                 <div class="home__images">
                     <img src="img/3.webp" alt="Haircut image" class="home__img-1">
@@ -129,7 +187,7 @@
         </section>
         <!--==================== SERV ====================-->
         <section class="serv section" id="serv">
-            <h2 class="section__title">How to Get Started</h2>
+            <h2 class="section__title" data-lang="serv1">How to Get Started</h2>
             <div class="serv__container container grid">
                 <!-- Step 1 -->
                 <article class="serv__card">
@@ -138,8 +196,8 @@
                             <i class="ri-number-1"></i>
                         </div>
                     </div>
-                    <h3 class="serv__name">Learn About the Coach</h3>
-                    <p class="serv__description">
+                    <h3 class="serv__name" data-lang="servh31">Learn About the Coach</h3>
+                    <p class="serv__description" data-lang="servp1">
                         Start by reading all the information about Coach Hussam Farouk, including his achievements and extensive experience in bodybuilding and fitness training.
                     </p>
                 </article>
@@ -151,8 +209,8 @@
                             <i class="ri-number-2"></i>
                         </div>
                     </div>
-                    <h3 class="serv__name">Check Success Stories</h3>
-                    <p class="serv__description">
+                    <h3 class="serv__name" data-lang="servh32">Check Success Stories</h3>
+                    <p class="serv__description" data-lang="servp2">
                         Explore the success stories of athletes trained by the coach. These include images and testimonials of champions who have reached the top under his guidance.
                     </p>
                 </article>
@@ -164,8 +222,8 @@
                             <i class="ri-number-3"></i>
                         </div>
                     </div>
-                    <h3 class="serv__name">Choose Your Package</h3>
-                    <p class="serv__description">
+                    <h3 class="serv__name" data-lang="servh33">Choose Your Package</h3>
+                    <p class="serv__description" data-lang="servp3">
                         Select the training package that suits your needs and goals. Once chosen, click on "Get Started" to begin your journey towards success.
                     </p>
                 </article>
@@ -176,15 +234,13 @@
             <div class="abo__container container grid">
                 <div class="abo__data">
                     <h2 style="color:var(--title-color);" class="section__title">
-                        More About <span class="color__span">Houssem</span> <span class="auto-type"></span>
+                        <p data-lang="abop1">More About</p> <span class="color__span"><p data-lang="abop2">Houssem</p></span> <span class="auto-type"></span>
                     </h2>
-                    <p class="abo__description">
+                    <p class="abo__description" data-lang="abop3">
                         Coach Houssam Farouk, originally Algerian with Tunisian nationality, has lived in the UAE for 25 years. He holds a degree in sports and physical education, along with certifications in bodybuilding coaching from Joe Weider Academy and nutrition from Flex
-                        Academy. With 29 years of experience, his major achievements include a bronze medal at Mr. Olympia Masters 212 and the Masters Open title in Romania, alongside Kamal Elgargni. He trains celebrities, politicians, and elites, offering
-                        both in-person and online coaching for competition prep and fitness goals. </p>
-                    <!-- <a href="#" class="button">
-                        Explore Travel <i class="ri-arrow-right-up-fill"></i>
-                    </a> -->
+                        Academy. With 29 years of experience, his major achievements include winning the Gold Medal and the Mr. Olympia Masters Open Weight Title, alongside a Bronze Medal in the 212 category at Mr. Olympia Masters. He also secured the
+                        Masters Open title in Romania, alongside Kamal Elgargni. He trains celebrities, politicians, and elites, offering both in-person and online coaching for competition prep and fitness goals.
+                    </p>
                 </div>
                 <div class="abo__image">
                     <img src="img/3.webp" alt="" class="abo__img">
@@ -200,36 +256,37 @@
                     <div class="slide swiper-slide">
                         <img src="img/feed.webp" id="zoomable-image-1" alt="" class="image" />
                         <!-- تم إضافة معرف مختلف لكل صورة -->
-                        <p>
+                        <p data-lang="clients1" class="arabic">
+                            أنا سعيد حقًا بالبرنامج وأشعر بالامتنان لأنني اتبعت توجيهاتك خلال فترة الإعداد. لقد مررت ببعض التجارب السيئة مع مدربين آخرين قبلك، حتى بعض الأصدقاء. أنت محترف حقيقي وتظهر احترامًا كبيرًا. ليس الأمر متعلقًا بالمال بالنسبة لك؛ أنت تركز حقًا على الجودة.
+                            بارك الله فيك.
+                        </p>
 
-                            I'm truly happy with the program and glad I followed your guidance during the preparation. I had some bad experiences with other trainers before you, even some friends. You're a real pro and show great respect. It's not just about money for you; you genuinely
-                            focus on quality. Bless you. </p>
 
                         <i class="bx bxs-quote-alt-left quote-icon"></i>
 
                         <div class="details">
-                            <span class="name">Fahd Ali</span>
+                            <span class="name" data-lang="nameclients1">Fahd Ali</span>
 
                         </div>
                     </div>
                     <div class="slide swiper-slide">
                         <img src="img/feed1.webp" id="zoomable-image-2" alt="" class="image" />
                         <!-- تم إضافة معرف مختلف لكل صورة -->
-                        <p>
+                        <p data-lang="clients2">
                             In these pictures, there are two trophies. The first is the gold medal. These words make me very proud, especially coming from the best person I've ever met, my coach and brother, Dr. Mohammed El Gadi Mo Qadi. I can't express how much I appreciate what
                             he's done for me. The second picture is just a medal 🥇. Thanks to everyone who supported me. Thank you all </p>
 
                         <i class="bx bxs-quote-alt-left quote-icon"></i>
 
                         <div class="details">
-                            <span class="name">Majed Saeed</span>
+                            <span class="name" data-lang="nameclients2">Majed Saeed</span>
 
                         </div>
                     </div>
                     <div class="slide swiper-slide">
                         <img src="img/feed2.webp" id="zoomable-image-3" alt="" class="image" />
                         <!-- تم إضافة معرف مختلف لكل صورة -->
-                        <p>
+                        <p data-lang="clients3">
                             You're the best coach I've ever worked with, I swear. You're like a doctor and an artist in bodybuilding. I'm really satisfied and happy. I pray for you day and night. Wherever I go, I speak highly of you. I recommend all my friends to train with you.
                             God willing, I'll continue working with you.
                         </p>
@@ -237,14 +294,14 @@
                         <i class="bx bxs-quote-alt-left quote-icon"></i>
 
                         <div class="details">
-                            <span class="name">Youssef Hassan</span>
+                            <span class="name" data-lang="nameclients3">Youssef Hassan</span>
 
                         </div>
                     </div>
                     <div class="slide swiper-slide">
                         <img src="img/feed4.webp" id="zoomable-image-4" alt="" class="image" />
                         <!-- تم إضافة معرف مختلف لكل صورة -->
-                        <p>
+                        <p data-lang="clients4">
 
                             I took the first overall in men's physique and earned a physique pro card. I came second in overall bodybuilding. It was really close between me and the other dude. I'm very happy that I worked with you, my friend. Thanks to you, I achieved all of this
                         </p>
@@ -252,7 +309,7 @@
                         <i class="bx bxs-quote-alt-left quote-icon"></i>
 
                         <div class="details">
-                            <span class="name">Khaled Ahmed</span>
+                            <span class="name" data-lang="nameclients4">Khaled Ahmed</span>
 
                         </div>
                     </div>
@@ -265,7 +322,8 @@
         <!--==================== QUESTIONS ====================-->
         <section class="questions section" id="faqs">
             <h2 class="section__title-center questions__title container">
-                Common Questions About <br>Training with Coach
+                <p class="section__title-center questions__title container" data-lang="questionp1">Common Questions About</p>
+                <p class="section__title-center questions__title container" data-lang="questionp2">Training with Coach</p>
             </h2>
 
             <div class="questions__container container grid">
@@ -273,13 +331,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q1">
                                 How will training with the coach help me achieve my goals?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a1">
                                 Training with the coach is designed to guide you step by step, ensuring you reach your fitness goals efficiently. Whether you aim for a championship physique or just want to transform your body, the coach tailors the plan to your needs, incorporating
                                 workouts, nutrition, and supplements.
                             </p>
@@ -289,13 +347,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q2">
                                 Can I really compete at a high level with the coach's training?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a2">
                                 Absolutely! The coach has a proven track record of preparing athletes for competition. With personalized guidance in every aspect, from diet to workout regimes, you'll have the support you need to perform at your best and win those gold medals.
                             </p>
                         </div>
@@ -304,13 +362,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q3">
                                 How does the coach support me throughout my journey?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a3">
                                 The coach provides daily communication via WhatsApp to ensure you're on track, adjusting your program when needed, and offering constant motivation. You'll never feel alone on your fitness journey!
                             </p>
                         </div>
@@ -321,13 +379,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q4">
                                 What kind of results can I expect?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a4">
                                 With consistency and dedication, you'll notice improvements in your physique, strength, and overall fitness. The coach's programs are designed for both short-term and long-term transformations, ensuring you achieve your desired body, whether for competitions
                                 or personal goals.
                             </p>
@@ -337,13 +395,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q5">
                                 How is the coach's program different from others?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a5">
                                 The coach offers a comprehensive approach, including not only workout plans but also meal prep, supplements, and cycle management. This holistic method ensures you are physically and mentally prepared for any fitness challenge, from daily life to competitive
                                 sports.
                             </p>
@@ -353,13 +411,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q6">
                                 Is the coach's training suitable for beginners?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a6">
                                 Yes! The coach tailors the program to your level of experience, ensuring that beginners and advanced athletes alike can progress effectively. With the coach's guidance, you'll build a strong foundation and steadily work toward your ultimate fitness goals.
                             </p>
                         </div>
@@ -369,7 +427,7 @@
         </section>
         <!--==================== CONTACT ====================-->
         <section class="contact section " id="contact">
-            <h2 class="section__title">Contact Me</h2>
+            <h2 class="section__title" data-lang="contact">Contact Me</h2>
             <div class="contact__container container grid">
                 <form action="" class="contact__form grid" id="contact-form">
                     <div class="contact__group grid">
@@ -377,7 +435,7 @@
                         <input type="email" name="user_email" placeholder="Email" required class="contact__input">
                     </div>
                     <textarea name="user_message" placeholder="Message" class="contact__input contact__area"></textarea>
-                    <button type="submit" class="button contact__button">Send Message</button>
+                    <button type="submit" class="button contact__button" data-lang="sendmessage">Send Message</button>
                     <p class="contact__message" id="contact-message"></p>
                 </form>
             </div>
@@ -387,22 +445,23 @@
     <!--==================== FOOTER ====================-->
     <footer class="footer">
         <div class="footer__container container grid">
+            <a href="#home" class="mmlogo">
+                <img src="img/logo.png" alt="" class="logo">
+            </a>
             <div class="footer__content grid">
-                <a href="index.html" class="mmlogo">
-                    <img src="img/logo.png" alt="" class="logo">
-                </a>
+
 
                 <ul class="footer__links">
                     <li>
-                        <a href="#home" class="footer__link">Home</a>
+                        <a href="index.html" class="footer__link" data-lang="footerhome">Home</a>
                     </li>
 
                     <li>
-                        <a href="pricing.html" class="footer__link">Pricing</a>
+                        <a href="pricing.html" class="footer__link" data-lang="footerpricing">Pricing</a>
                     </li>
 
                     <li>
-                        <a href="#abo" class="footer__link">About</a>
+                        <a href="#abo" class="footer__link" data-lang="footerabout">About</a>
                     </li>
                 </ul>
             </div>
@@ -434,6 +493,7 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <!--=============== MAIN JS ===============-->
     <script src="js/main.js "></script>
+    <script src="js/language.js "></script>
     <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js "></script>
