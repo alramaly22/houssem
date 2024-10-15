@@ -61,8 +61,8 @@
 </head>
 
 <body>
-<!--     <div id="preloader">
-    </div> -->
+    <div id="preloader">
+    </div>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -747,6 +747,13 @@
             duration: 1500
         });
     </script> -->
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function() {
+            loader.style.display = "none";
+        });
+    </script>
 </body>
 
 </html>
