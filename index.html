@@ -199,7 +199,7 @@
                 </div>
         </section>
         <!--==================== SERV ====================-->
-        <section class="serv section" id="serv">
+        <section class="serv section" id="serv" data-aos="fade-right">
             <h2 class="section__title">How to Get Started</h2>
             <div class="serv__container container grid">
                 <!-- Step 1 -->
@@ -269,93 +269,6 @@
                 </div>
 
         </section>
-        <!--==================== SERVICES ====================-->
-        <!-- <section class="services section " id="services">
-            <div class="services__container container grid">
-                <div class="services__data">
-                    <div>
-                        <span class="section__subtitle">OUR SERVICES</span>
-                        <h2 class="section__title">High Quality <br> Construction Services</h2>
-                    </div>
-                    <p class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed similique consequatur repellat, voluptates ut nulla.</p>
-                    <a href="#" class="button">Contact Now</a>
-                </div>
-                <div class="services__swiper swiper">
-                    <div class="swiper-wrapper">
-                        <articel class="services__card swiper-slide">
-                            <div class="services__icon">
-                                <i class="ri-building-3-fill"></i>
-                            </div>
-                            <h3 class="services__title">
-                                Housing <br> Construction
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nostrum vero sed, explicabo reprehenderit blanditiis voluptatem obcaecati fugiat corrupti earum dolorum sapiente veniam facilis ex.
-                            </p>
-                        </articel>
-
-                        <articel class="services__card swiper-slide">
-                            <div class="services__icon">
-                                <i class="ri-collapse-diagonal-2-line"></i>
-                            </div>
-                            <h3 class="services__title">
-                                Housing <br> Construction
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nostrum vero sed, explicabo reprehenderit blanditiis voluptatem obcaecati fugiat corrupti earum dolorum sapiente veniam facilis ex.
-                            </p>
-                        </articel>
-
-                        <articel class="services__card swiper-slide">
-                            <div class="services__icon">
-                                <i class="ri-collapse-diagonal-2-line"></i>
-                            </div>
-                            <h3 class="services__title">
-                                Housing <br> Construction
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nostrum vero sed, explicabo reprehenderit blanditiis voluptatem obcaecati fugiat corrupti earum dolorum sapiente veniam facilis ex.
-                            </p>
-                        </articel>
-
-                        <articel class="services__card swiper-slide">
-                            <div class="services__icon">
-                                <i class="ri-collapse-diagonal-2-line"></i>
-                            </div>
-                            <h3 class="services__title">
-                                Housing <br> Construction
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nostrum vero sed, explicabo reprehenderit blanditiis voluptatem obcaecati fugiat corrupti earum dolorum sapiente veniam facilis ex.
-                            </p>
-                        </articel>
-
-                        <articel class="services__card swiper-slide">
-                            <div class="services__icon">
-                                <i class="ri-collapse-diagonal-2-line"></i>
-                            </div>
-                            <h3 class="services__title">
-                                Housing <br> Construction
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nostrum vero sed, explicabo reprehenderit blanditiis voluptatem obcaecati fugiat corrupti earum dolorum sapiente veniam facilis ex.
-                            </p>
-                        </articel>
-
-                    </div>
-                </div>
-         
-                <div class="swiper-button-prev">
-                    <i class="ri-arrow-left-double-fill"></i>
-                </div>
-                <div class="swiper-button-next">
-                    <i class="ri-arrow-right-double-fill"></i>
-                </div>
-            </div>
-            <div class="services__shape">
-
-            </div>
-        </section> -->
         <!--==================== Transformation ====================-->
         <section class="new section" id="new" data-aos="fade-right">
             <h2 class="section__title" data-lang="transformation">
@@ -668,7 +581,7 @@
             </div>
         </section>
         <!--==================== CONTACT ====================-->
-        <section class="contact section " id="contact">
+        <section class="contact section " id="contact" data-aos="fade-right">
             <h2 class="section__title">Contact Me</h2>
             <div class="contact__container container grid">
                 <form action="" class="contact__form grid" id="contact-form">
@@ -746,7 +659,15 @@
             offset: 200,
             duration: 1500
         });
-    </script> -->
+    </script>
+
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function() {
+            loader.style.display = "none";
+        });
+    </script>
+
 </body>
 
 </html>
