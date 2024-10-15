@@ -19,58 +19,101 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="css/styles.css">
-
+    <style>
+        #language-selector {
+            appearance: none;
+            font-weight: bolder;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-size: cover;
+            background-position: center;
+            color: var(--body-color);
+            border: none;
+            background: var(--first-color);
+            padding: 10px;
+            border-radius: 1rem 0;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        #language-selector option {
+            color: #000;
+        }
+        /* تحديد مكان النص للغة العربية فقط */
+        
+        .arabic-font {
+            direction: rtl;
+            text-align: right;
+        }
+        
+        .second-arabic-font {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .se-arab {
+            direction: rtl;
+            text-align: center;
+        }
+    </style>
     <title>Houssem Den D</title>
 </head>
 
 <body>
+    <div id="preloader">
+    </div>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
+
             <a href="index.html" class="nav__logo">
                 <img src="img/logo.png" alt="" class="logomain">
             </a>
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="#home" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Home</span>
+                            <span data-lang="nav1">Home</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#about" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>About</span>
+                            <span data-lang="nav2">About</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#new" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Trasformation</span>
+                            <span data-lang="nav3">Trasformation</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#pricing" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Pricing</span>
+                            <span data-lang="nav4">Pricing</span>
                         </a>
                     </li>
 
                     <li class="nav__item">
                         <a href="#contact" class="nav__link">
                             <i class="ri-arrow-right-up-line"></i>
-                            <span>Contact</span>
+                            <span data-lang="nav5">Contact</span>
                         </a>
                     </li>
                 </ul>
+
                 <!-- ============ Close button ============  -->
                 <div class="nav__close" id="nav-close">
                     <i class="ri-door-closed-fill"></i>
                 </div>
+
                 <div class="nav__social">
                     <a href="#" target="_blank" class="nav__social-link">
                         <i class="ri-facebook-circle-fill"></i>
@@ -86,12 +129,19 @@
 
 
                 </div>
+
             </div>
 
             <!-- Toggle button -->
+            <select name="" id="language-selector">
+                <i class="fa-solid fa-earth-oceania"></i>
+                <option value="en" selected>En</option>
+                <option value="ar">Ar</option>
+            </select>
             <div class="nav_toggle" id="nav-toggle">
                 <i class="ri-door-closed-line"></i>
             </div>
+
         </nav>
     </header>
 
@@ -101,38 +151,47 @@
         <section class="home section" id="home">
             <div class="video-container">
                 <video class="home__video" autoplay muted loop>
-                    <source src="video/per1.mp4" type="video/mp4" type="video/mp4">
+                    <source src="video/vi.mp4" type="video/mp4" type="video/mp4">
                 </video>
                 <div class="video-overlay"></div>
             </div>
             <img src="img/home-lines-bg.svg" alt="" class="home__lines">
             <div class="home__container container grid">
                 <div class="home__content grid">
-                    <h1 class="home__title">
+                    <h1 class="home__title" data-lang="home1">
                         Unleash your true potential with Hussam Farouk
                     </h1>
                     <!-- <p class="home__description">
                         With Hussam Farouk, elite trainer and bodybuilding expert, elevate your performance and achieve new heights in your fitness journey
                     </p> -->
                     <div class="home__buttons">
-                        <a href="pricing.html" class="button">Our Services</a>
+                        <a href="pricing.html" class="button" data-lang="button1">Our Services</a>
 
                     </div>
                     <div class="home__info">
                         <div>
                             <h3 class="home__info-title">+29</h3>
                             <p class="home__info-description">
-                                Years of <br> Experience
+                                <p class="home__info-description" data-lang="homep1">Years of</p>
+                                <p class="home__info-description" data-lang="homep2">Experience</p>
                             </p>
                         </div>
                         <div>
-                            <h3 class="home__info-title">Bronze</h3>
+                            <h3 class="home__info-title" data-lang="homeh31">Gold</h3>
                             <p class="home__info-description">
-                                Mr. Olympia Masters <br> 212 Medal
+                                <p class="home__info-description" data-lang="homep3">Mr. Olympia Masters</p>
+                                <p class="home__info-description" data-lang="homep4">Open Weight Title</p>
                             </p>
                         </div>
-
+                        <div>
+                            <h3 class="home__info-title" data-lang="homeh32">Bronze</h3>
+                            <p class="home__info-description">
+                                <p class="home__info-description" data-lang="homep5">Mr. Olympia Masters</p>
+                                <p class="home__info-description" data-lang="homep6"> 212 Medal</p>
+                            </p>
+                        </div>
                     </div>
+
                 </div>
                 <div class="home__images">
                     <img src="img/3.webp" alt="Haircut image" class="home__img-1">
@@ -141,7 +200,7 @@
         </section>
         <!--==================== SERV ====================-->
         <section class="serv section" id="serv">
-            <h2 class="section__title">How to Get Started</h2>
+            <h2 class="section__title" data-lang="serv1">How to Get Started</h2>
             <div class="serv__container container grid">
                 <!-- Step 1 -->
                 <article class="serv__card">
@@ -150,8 +209,8 @@
                             <i class="ri-number-1"></i>
                         </div>
                     </div>
-                    <h3 class="serv__name">Learn About the Coach</h3>
-                    <p class="serv__description">
+                    <h3 class="serv__name" data-lang="servh31">Learn About the Coach</h3>
+                    <p class="serv__description" data-lang="servp1">
                         Start by reading all the information about Coach Hussam Farouk, including his achievements and extensive experience in bodybuilding and fitness training.
                     </p>
                 </article>
@@ -163,8 +222,8 @@
                             <i class="ri-number-2"></i>
                         </div>
                     </div>
-                    <h3 class="serv__name">Check Success Stories</h3>
-                    <p class="serv__description">
+                    <h3 class="serv__name" data-lang="servh32">Check Success Stories</h3>
+                    <p class="serv__description" data-lang="servp2">
                         Explore the success stories of athletes trained by the coach. These include images and testimonials of champions who have reached the top under his guidance.
                     </p>
                 </article>
@@ -176,8 +235,8 @@
                             <i class="ri-number-3"></i>
                         </div>
                     </div>
-                    <h3 class="serv__name">Choose Your Package</h3>
-                    <p class="serv__description">
+                    <h3 class="serv__name" data-lang="servh33">Choose Your Package</h3>
+                    <p class="serv__description" data-lang="servp3">
                         Select the training package that suits your needs and goals. Once chosen, click on "Get Started" to begin your journey towards success.
                     </p>
                 </article>
@@ -188,7 +247,7 @@
             <div class="choose__container container grid">
                 <div class="video__content">
                     <video id="video-file" class="choose__img" muted autoplay>
-                        <source src="video/per2.mp4" type="video/mp4">
+                        <source src="video/vi2.mp4" type="video/mp4">
                     </video>
 
                     <button class="button button--flex video__button" id="video-button">
@@ -198,16 +257,15 @@
                 <div class="choose__contect">
                     <div class="choose__data">
                         <h2 style="color:var(--title2-color);" class="section__title">
-                            About <span class="color__span">Houssem</span> <span class="auto-type"></span>
+                            <p data-lang="about1">About</p> <span class="color__span"><p data-lang="about2">Houssem</p></span> <span class="auto-type"></span>
                         </h2>
 
                     </div>
-                    <p style="color: hsl(152deg 2.56% 64.15%);">
-                        Meet Hussam Farouk, an outstanding bodybuilding coach. His journey in the fitness world began over 29 years ago, leaving a significant mark in bodybuilding and fitness. With his extensive experience and numerous achievements, Hussam is dedicated to changing
-                        lives for the better through his innovative training programs and supportive personality. Whether you're looking to lose weight, build muscle, or improve your overall fitness, Hussam is here to help you achieve your health and
-                        fitness goals.
+                    <p style="color: hsl(152deg 2.56% 64.15%);" data-lang="about3">
+                        Hussam Farouk, with 29 years of experience, is a top bodybuilding coach known for his achievements and transformative training programs. Whether your goal is weight loss, muscle gain, or overall fitness, Hussam is here to help you succeed.
                     </p>
-                    <div class="butt"><a href="about.html" class="button">Know More</a></div>
+
+                    <div class="butt"><a href="about.html" class="button" data-lang="buttonabout2">Know More</a></div>
                 </div>
 
         </section>
@@ -321,6 +379,9 @@
                         <div class="image swiper-slide">
                             <img src="img/champion4.webp" alt="">
                         </div>
+                        <div class="image swiper-slide">
+                            <img src="img/champions4.webp" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="new__swiper swiper" id="swiper2">
@@ -369,11 +430,21 @@
 
                     <div class="pricing-card-body">
                         <ul>
-                            <li><i class="ri-checkbox-circle-line"></i> Full Training Plan</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Supplements Included</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Nutrition Guidance</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Cycle Planning</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Cleaning & Protection</li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp1"> Full Training Plan</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp2">Supplements Included</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp3"> Nutrition Guidance</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp4"> Cycle Planning</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp5"> Cleaning & Protection</p>
+                            </li>
                         </ul>
                         <a href="card.html" data-lang="get_started" class="pributton button_price">Get Started</a>
                     </div>
@@ -387,17 +458,27 @@
                         <span class="pricing-card-title" data-lang="competition">Premium Package</span>
                         <div class="price-circle">
                             <span data-lang="natural_packagep2" class="price">$1500</span>
-                            <span data-lang="month1" class="desc">6 Months</span>
+                            <span data-lang="month2" class="desc">6 Months</span>
                         </div>
                     </div>
 
                     <div class="pricing-card-body">
                         <ul>
-                            <li><i class="ri-checkbox-circle-line"></i> Full Training Plan</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Supplements Included</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Nutrition Guidance</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Cycle Planning</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Cleaning & Protection</li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp1"> Full Training Plan</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp2">Supplements Included</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp3"> Nutrition Guidance</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp4"> Cycle Planning</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp5"> Cleaning & Protection</p>
+                            </li>
                         </ul>
                         <a href="card.html" data-lang="get_started" class="pributton button_price">Get Started</a>
                     </div>
@@ -408,17 +489,27 @@
                         <span class="pricing-card-title" data-lang="competition_prep">Ultimate Package</span>
                         <div class="price-circle">
                             <span data-lang="natural_packagep3" class="price">$2500</span>
-                            <span data-lang="month2" class="desc">1 Year</span>
+                            <span data-lang="month3" class="desc">1 Year</span>
                         </div>
                     </div>
 
                     <div class="pricing-card-body">
                         <ul>
-                            <li><i class="ri-checkbox-circle-line"></i> Full Training Plan</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Supplements Included</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Nutrition Guidance</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Cycle Planning</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Cleaning & Protection</li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp1"> Full Training Plan</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp2">Supplements Included</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp3"> Nutrition Guidance</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp4"> Cycle Planning</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp5"> Cleaning & Protection</p>
+                            </li>
                         </ul>
                         <a href="card.html" data-lang="get_started" class="pributton button_price">Get Started</a>
                     </div>
@@ -435,8 +526,12 @@
 
                     <div class="pricing-card-body">
                         <ul>
-                            <li><i class="ri-checkbox-circle-line"></i> Personalized Training Advice</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Nutrition Tips</li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp6">Personalized Training Advice</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp7"> Nutrition Tips</p>
+                            </li>
                         </ul>
                         <a href="card.html" data-lang="get_started" class="pributton button_price">Get Started</a>
                     </div>
@@ -447,14 +542,18 @@
                         <span class="pricing-card-title" data-lang="personal_trainer">Personal Trainer</span>
                         <div class="price-circle">
                             <span data-lang="personal_trainer_price" class="price">$150</span>
-                            <span data-lang="session" class="desc">Face-to-Face Session</span>
+                            <span data-lang="session2" class="desc">Face-to-Face Session</span>
                         </div>
                     </div>
 
                     <div class="pricing-card-body">
                         <ul>
-                            <li><i class="ri-checkbox-circle-line"></i> One-on-One Training</li>
-                            <li><i class="ri-checkbox-circle-line"></i> Tailored Workouts</li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp8">One-on-One Training</p>
+                            </li>
+                            <li><i class="ri-checkbox-circle-line"></i>
+                                <p data-lang="ulp9">Tailored Workouts</p>
+                            </li>
                         </ul>
                         <a href="card.html" data-lang="get_started" class="pributton button_price">Get Started</a>
                     </div>
@@ -465,7 +564,8 @@
         <!--==================== QUESTIONS ====================-->
         <section class="questions section" id="faqs">
             <h2 class="section__title-center questions__title container">
-                Common Questions About <br>Training with Coach
+                <p class="section__title-center questions__title container" data-lang="questionp1">Common Questions About</p>
+                <p class="section__title-center questions__title container" data-lang="questionp2">Training with Coach</p>
             </h2>
 
             <div class="questions__container container grid">
@@ -473,13 +573,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q1">
                                 How will training with the coach help me achieve my goals?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a1">
                                 Training with the coach is designed to guide you step by step, ensuring you reach your fitness goals efficiently. Whether you aim for a championship physique or just want to transform your body, the coach tailors the plan to your needs, incorporating
                                 workouts, nutrition, and supplements.
                             </p>
@@ -489,13 +589,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q2">
                                 Can I really compete at a high level with the coach's training?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a2">
                                 Absolutely! The coach has a proven track record of preparing athletes for competition. With personalized guidance in every aspect, from diet to workout regimes, you'll have the support you need to perform at your best and win those gold medals.
                             </p>
                         </div>
@@ -504,13 +604,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q3">
                                 How does the coach support me throughout my journey?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a3">
                                 The coach provides daily communication via WhatsApp to ensure you're on track, adjusting your program when needed, and offering constant motivation. You'll never feel alone on your fitness journey!
                             </p>
                         </div>
@@ -521,13 +621,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q4">
                                 What kind of results can I expect?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a4">
                                 With consistency and dedication, you'll notice improvements in your physique, strength, and overall fitness. The coach's programs are designed for both short-term and long-term transformations, ensuring you achieve your desired body, whether for competitions
                                 or personal goals.
                             </p>
@@ -537,13 +637,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q5">
                                 How is the coach's program different from others?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a5">
                                 The coach offers a comprehensive approach, including not only workout plans but also meal prep, supplements, and cycle management. This holistic method ensures you are physically and mentally prepared for any fitness challenge, from daily life to competitive
                                 sports.
                             </p>
@@ -553,13 +653,13 @@
                     <div class="questions__item">
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
-                            <h3 class="questions__item-title">
+                            <h3 class="questions__item-title" data-lang="q6">
                                 Is the coach's training suitable for beginners?
                             </h3>
                         </header>
 
                         <div class="questions__content">
-                            <p class="questions__description">
+                            <p class="questions__description" data-lang="a6">
                                 Yes! The coach tailors the program to your level of experience, ensuring that beginners and advanced athletes alike can progress effectively. With the coach's guidance, you'll build a strong foundation and steadily work toward your ultimate fitness goals.
                             </p>
                         </div>
@@ -569,7 +669,7 @@
         </section>
         <!--==================== CONTACT ====================-->
         <section class="contact section " id="contact">
-            <h2 class="section__title">Contact Me</h2>
+            <h2 class="section__title" data-lang="contact">Contact Me</h2>
             <div class="contact__container container grid">
                 <form action="" class="contact__form grid" id="contact-form">
                     <div class="contact__group grid">
@@ -577,7 +677,7 @@
                         <input type="email" name="user_email" placeholder="Email" required class="contact__input">
                     </div>
                     <textarea name="user_message" placeholder="Message" class="contact__input contact__area"></textarea>
-                    <button type="submit" class="button contact__button">Send Message</button>
+                    <button type="submit" class="button contact__button" data-lang="sendmessage">Send Message</button>
                     <p class="contact__message" id="contact-message"></p>
                 </form>
             </div>
@@ -586,22 +686,23 @@
     <!--==================== FOOTER ====================-->
     <footer class="footer">
         <div class="footer__container container grid">
+            <a href="#home" class="mmlogo">
+                <img src="img/logo.png" alt="" class="logo">
+            </a>
             <div class="footer__content grid">
-                <a href="#home" class="mmlogo">
-                    <img src="img/logo.png" alt="" class="logo">
-                </a>
+
 
                 <ul class="footer__links">
                     <li>
-                        <a href="#home" class="footer__link">Home</a>
+                        <a href="#home" class="footer__link" data-lang="footerhome">Home</a>
                     </li>
 
                     <li>
-                        <a href="pricing.html" class="footer__link">Pricing</a>
+                        <a href="pricing.html" class="footer__link" data-lang="footerpricing">Pricing</a>
                     </li>
 
                     <li>
-                        <a href="about.html" class="footer__link">About</a>
+                        <a href="about.html" class="footer__link" data-lang="footerabout">About</a>
                     </li>
                 </ul>
             </div>
@@ -633,6 +734,7 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <!--=============== MAIN JS ===============-->
     <script src="js/main.js "></script>
+    <script src="js/language.js "></script>
     <script type="module " src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js "></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js "></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js "></script>
