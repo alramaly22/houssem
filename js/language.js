@@ -6,7 +6,7 @@ let lang = {
         nav4: "الأسعار",
         nav5: "تواصل",
         home1: "استكشف إمكانياتك مع حسام فاروق",
-        button1: "خدماتنا",
+        button1: "ابدأ الان",
         homep1: "سنوات من",
         homep2: "الخبرة",
         homeh31: "ذهبية",
@@ -124,7 +124,7 @@ let lang = {
         nav7: "Faqs",
 
         home1: "Unleash your true potential with Hussam Farouk",
-        button1: "Our Services",
+        button1: "Get Start",
         homep1: "Years of",
         homep2: "Experience",
         homeh31: "Gold",
