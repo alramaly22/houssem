@@ -1299,16 +1299,16 @@
         position: absolute;
         width: 200px;
         padding: 10px;
-        background-color: #f9f9f9;
+        background-color: #f9f9f938;
         transform: rotate(-45deg);
         left: -63px;
-        top: 18px;
+        top: 19px;
     }
     
     .pricing-card:nth-child(2) .tag-box .tag {
         font-size: 13px;
         font-weight: bold;
-        color: #7b7b7b;
+        color: hsl(79.74deg 60.78% 50%);
     }
     /*=============== CONTACT ===============*/
     
