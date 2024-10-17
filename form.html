@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--=============== REMIXICONS ===============-->
+    <meta name="description" content="Hussam Farouk, a professional bodybuilding coach with 29 years of experience, helps you achieve your goals with transformative training programs and fitness expertise." />
+    <meta property="og:title" content="Hussam Farouk - Professional Bodybuilding Coach" />
+    <meta property="og:description" content="Hussam Farouk offers personalized training programs for weight loss, muscle gain, and competition prep. Start your fitness journey today!" />
+
+    <!-- <link rel="stylesheet" href="css/navform.css"> -->
+    <link rel="stylesheet" href="css/masterform.css">
+    <link rel="stylesheet" href="css/mm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+
+    <style>
+        #language-selector {
+            appearance: none;
+            font-weight: bolder;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-size: cover;
+            background-position: center;
+            color: var(--body-color);
+            border: none;
+            background: var(--first-color);
+            padding: 10px;
+            border-radius: 1rem 0;
+            cursor: pointer;
+            outline: none;
+        }
+        
+        #language-selector option {
+            color: #000;
+        }
+        
+        .arabic-font {
+            direction: rtl;
+            text-align: center;
+        }
+        
+        .second-arabic-font {
+            direction: rtl;
+            text-align: right;
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .se-arab {
+            direction: rtl;
+            text-align: center;
+        }
+    </style>
+    <title>Form</title>
+
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav containere">
+            <a href="index.html" class="nav__logo">
+                <img src="img/logo.png" alt="" id="logo">
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link" data-lang="nav1">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link" data-lang="nav2">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link" data-lang="nav4">Pricing</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link" data-lang="nav5">Contact</a>
+                    </li>
+                </ul>
+                <!-- close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+            </div>
+
+            <div class="nav__buttons">
+                <!-- theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <!-- toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
+
+            </div>
+            <select name="" id="language-selector">
+                <i class="fa-solid fa-earth-oceania"></i>
+                <option value="en" selected>En</option>
+                <option value="ar">Ar</option>
+            </select>
+        </nav>
+    </header>
+
+
+
+
+
+    <button class="button" id="toggleButton" data-lang="button1">Get Start</button>
+    <section class="wrapper hidden" id="imageSection">
+        <div class="form signup">
+            <!-- multistep form -->
+
+
+            <form id="msform">
+                <!-- progressbar -->
+                <ul id="progressbar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <!-- fieldsets -->
+                <fieldset class="fi">
+                    <h2 class="fs-title" data-lang="question1">Question 1</h2>
+                    <label class="lab" for="name" data-lang="quetionname">Your Name</label>
+                    <input type="text" name="CAT_Custom_1" id="name" placeholder="Name" />
+                    <label class="lab" for="age" data-lang="quetionage">Your Age</label>
+                    <input type="number" name="CAT_Custom_2" id="age" placeholder="Age" required />
+
+                    <label class="lab" for="transfer-number" data-lang="quetiontransfer">Bank Account Number or MTCN (from which the money was transferred)</label>
+                    <input type="number" required name="transfer-number" id="transfer-number" placeholder="Enter the Bank Account Number or MTCN from which the money was transferred" pattern="\d+" title="Please enter the Bank Account Number or MTCN from which the money was transferred"
+                    />
+
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+                <fieldset class="fi">
+                    <h2 class="fs-title" data-lang="question2">Question 2</h2>
+                    <!-- <label style="color: white;" for="CAT_Custom_2" data-lang="qutionheight">Your Height?</label> -->
+                    <label style="color: white;" for="CAT_Custom_2" data-lang="qutionheight">Your Height?</label>
+                    <input type="number" name="CAT_Custom_2" id="CAT_Custom_2" placeholder="Your Height?" required />
+
+                    <label style="color: white;" for="range-weight" data-lang="qutionweight">Your Weight?</label>
+                    <input type="number" required name="range-weight" id="range-weight" placeholder="Your Weight?" pattern="\d+" title="Your Weight?" />
+                    <input type="button" name="previous" class="previous action-button butt" required value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+
+
+                <fieldset>
+                    <h2 class="fs-title" data-lang="qution3">Question 3</h2>
+                    <h3 class="fs-subtitle" data-lang="qutiongender">What is your gender?</h3>
+                    <!-- قم بإضافة ملصق للحقل -->
+                    <div class="f">
+                        <div class="fy">
+                            <label style="color: white;" for="gender-male" data-lang="qutionmale">Male</label>
+                            <input class="checkboxo" type="radio" name="gender" id="gender-male" value="Male" required>
+                            <!-- تعيين القيمة "ذكر" للإجابة الإيجابية -->
+                        </div>
+
+                        <div class="fn">
+                            <label style="color: white;" for="gender-female" data-lang="qutionfemale">Female</label>
+                            <input class="checkboxo" type="radio" name="gender" id="gender-female" value="Female" required>
+                            <!-- تعيين القيمة "أنثى" للإجابة السلبية -->
+                        </div>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+
+
+
+                <fieldset>
+                    <h2 class="fs-title" data-lang="qution4">Question 4</h2>
+                    <h3 class="fs-subtitle" data-lang="qutionbloodtype">What is your blood type?</h3>
+                    <div class="checkbox-container">
+                        <label>
+                            <input class="checkboxo" type="radio" name="blood_type" value="A+" data-lang="qutionApositive"> A+
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="radio" name="blood_type" value="A-" data-lang="qutionAnegative"> A-
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="radio" name="blood_type" value="B+" data-lang="qutionBpositive"> B+
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="radio" name="blood_type" value="B-" data-lang="qutionBnegative"> B-
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="radio" name="blood_type" value="AB+" data-lang="qutionABpositive"> AB+
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="radio" name="blood_type" value="AB-" data-lang="qutionABnegative"> AB-
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="radio" name="blood_type" value="O+" data-lang="qutionOpositive"> O+
+                        </label>
+                        <label>
+                            <input class="checkboxo" type="radio" name="blood_type" value="O-" data-lang="qutionOnegative"> O-
+                        </label>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+
+                <fieldset>
+                    <h2 class="fs-title" data-lang="qution5">Question 5</h2>
+                    <h3 class="fs-subtitle" data-lang="qutionothersports">Do you play other sports?</h3>
+                    <!-- قم بإضافة ملصق للحقل -->
+                    <div class="f">
+                        <div class="fy">
+                            <label style="color: white;" for="sports-yes" data-lang="qutionyes">Yes</label>
+                            <input class="checkboxo" type="radio" name="CAT_Custom_6" id="sports-yes" width="15px" value="Yes" required>
+                            <!-- تعيين القيمة "نعم" للإجابة الإيجابية -->
+                        </div>
+
+                        <div class="fn">
+                            <label style="color: white;" for="sports-no" data-lang="qutionno">No</label>
+                            <input class="checkboxo" type="radio" name="CAT_Custom_6" id="sports-no" value="No" required>
+                            <!-- تعيين القيمة "لا" للإجابة السلبية -->
+                        </div>
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+                <fieldset>
+                    <h2 class="fs-title" data-lang="qution6">Question 6</h2>
+                    <h3 class="fs-subtitle" data-lang="qutionexperiance">What is your goal from this exercise?</h3>
+                    <!-- <label for="CAT_Custom_11">Your Answer:</label> -->
+                    <input type="text" name="CAT_Custom_11" id="CAT_Custom_11" required onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);" />
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+
+
+                <fieldset>
+                    <h2 class="fs-title" data-lang="qution7">Question 7</h2>
+                    <h3 class="fs-subtitle" data-lang="qutionissues">Do you have any health issues or injuries?</h3>
+                    <!-- <label for="health_issues">Your Answer:</label> -->
+                    <input type="text" name="health_issues" id="health_issues" required onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);" />
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+
+
+
+
+                <fieldset>
+                    <h2 class="fs-title" data-lang="qution8">Question 8</h2>
+                    <h3 class="fs-subtitle" data-lang="qutionpachage">What package did you choose in terms of pricing?</h3>
+                    <div class="radio-container">
+                        <div class="ff">
+                            <div class="f1">
+                                <label class="f1">
+                                    <input class="radio" type="radio" name="package" value="Basic" > <p data-lang="qutionbasic">BASIC PACKAGE</p>
+                                </label>
+                            </div>
+                            <div class="f2">
+                                <label class="f2">
+                                    <input class="radio" type="radio" name="package" value="Premium"> <p data-lang="qutionpremium">PREMIUM PACKAGE</p>
+                                </label>
+                            </div>
+                            <div class="f3">
+                                <label class="f3">
+                                    <input class="radio" type="radio" name="package" value="Ultimate"> <p data-lang="qutionultimate">ULTIMATE PACKAGE</p>
+                                </label>
+                            </div>
+                            <div class="f4">
+                                <label class="f4">
+                                    <input class="radio" type="radio" name="package" value="Consultation" > <p data-lang="qutionconsultation">CONSULTATION</p>
+                                </label>
+                            </div>
+                            <div class="f5">
+                                <label class="f5">
+                                    <input class="radio" type="radio" name="package" value="Personal Trainer"> <p data-lang="qutionpersonaltrainer">PERSONAL TRAINER</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" name="next" class="next action-button butt" value="Next" />
+                </fieldset>
+
+
+                <fieldset class="client-instructions">
+                    <legend data-lang="Instructions1">Client Instructions</legend>
+                    <ol>
+                        <li class="mainnn" data-lang="Instructions2">Please note that the coach will not respond to anyone who has not sent:</li>
+                        <ul>
+                            <li class="notmainnn" data-lang="Instructions3">The bank account number from which the transfer was made</li>
+                            <li class="notmainnn" data-lang="Instructions4">The MTCN number for receiving funds from Western Union</li>
+                        </ul>
+                        <li class="mainnn" data-lang="Instructions5">After sending the above information, you will click the "Send" button. You will be redirected directly to the coach's WhatsApp, where all the information you entered will be available.</li>
+                        <li class="mainnn" data-lang="Instructions6">Upon opening WhatsApp, you must also send a picture of the following analyses:</li>
+                        <ul>
+                            <li class="notmainnn" data-lang="Instructions7">Hormone analyses</li>
+                            <li class="notmainnn" data-lang="Instructions8">Liver analyses</li>
+                            <li class="notmainnn" data-lang="Instructions9">Kidney analyses</li>
+                            <li class="notmainnn" data-lang="Instructions10">Thyroid analyses</li>
+                        </ul>
+                        <li class="mainnn" data-lang="Instructions">
+                            <p class="mainnn" data-lang="Instructions">Once you have sent all the information and pictures, the coach will review the analyses, and you will be contacted for further details.</p>
+                        </li>
+                    </ol>
+
+                    <input type="button" name="previous" class="previous action-button butt" value="Previous" />
+                    <input type="button" id="sendToWhatsApp" class="submit action-button butt" value="Send" />
+                </fieldset>
+
+
+    </section>
+
+    </form>
+    </div>
+    <!--========== whatsapp ==========-->
+
+
+    <!-- <a href="https://api.whatsapp.com/send?phone=+201004056576" class="whatsapp">
+    <i class="fa-brands fa-whatsapp wahtsapp-icon"></i>
+        </a> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the "Send to WhatsApp" button by its ID
+            const sendToWhatsAppButton = document.getElementById("sendToWhatsApp");
+
+            // Set the target WhatsApp number here
+            const whatsappNumber = "+971561072003";
+
+
+            sendToWhatsAppButton.addEventListener("click", function() {
+                // Collect form data
+                const name = document.getElementById("name").value;
+                const age = document.getElementById("age").value;
+                const transferNumber = document.getElementById("transfer-number").value;
+                const height = document.getElementById("CAT_Custom_2").value;
+                const weight = document.getElementById("range-weight").value;
+                const gender = document.querySelector("input[name='gender']:checked").value;
+                const bloodType = document.querySelector("input[name='blood_type']:checked").value;
+                const playsOtherSports = document.querySelector("input[name='CAT_Custom_6']:checked").value;
+                const goal = document.getElementById("CAT_Custom_11").value;
+                const healthIssues = document.getElementById("health_issues").value;
+                const packageChosen = document.querySelector("input[name='package']:checked").value;
+
+                // Prepare the message
+                const message = `*Name:* ${name}\n*Age:* ${age}\n*Transfer Number:* ${transferNumber}\n*Height:* ${height}\n*Weight:* ${weight}\n*Gender:* ${gender}\n*Blood Type:* ${bloodType}\n*Do you play other sports?:* ${playsOtherSports}\n*Goal from exercise:* ${goal}\n*Health Issues/Injuries:* ${healthIssues}\n*Package Chosen:* ${packageChosen}`;
+
+                // Encode the message
+                const encodedMessage = encodeURIComponent(message);
+
+                // Open WhatsApp with the message
+                window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`);
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+    <script>
+        // احصل على الزرار والقسم الصورة
+        const toggleButton = document.getElementById('toggleButton');
+        const imageSection = document.getElementById('imageSection');
+
+        // قم بإضافة مستمع لنقرة الزرار
+        toggleButton.addEventListener('click', function() {
+            // قم بإخفاء الزرار
+            toggleButton.style.display = 'none';
+            // قم بعرض القسم الصورة
+            imageSection.style.display = 'block';
+        });
+    </script>
+    <script>
+        /*=============== SHOW MENU ===============*/
+        const navMenu = document.getElementById('nav-menu'),
+            navToggle = document.getElementById('nav-toggle'),
+            navClose = document.getElementById('nav-close')
+
+        /*===== MENU SHOW =====*/
+        /* Validate if constant exists */
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.add('show-menu')
+            })
+        }
+
+        /*===== MENU HIDDEN =====*/
+        /* Validate if constant exists */
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                navMenu.classList.remove('show-menu')
+            })
+        }
+
+        /*=============== REMOVE MENU MOBILE ===============*/
+        const navLink = document.querySelectorAll('.nav__link')
+
+        const linkAction = () => {
+            const navMenu = document.getElementById('nav-menu')
+                // When we click on each nav__link, we remove the show-menu class
+            navMenu.classList.remove('show-menu')
+        }
+        navLink.forEach(n => n.addEventListener('click', linkAction))
+    </script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/mianform.js"></script>
+    <script src="js/language.js"></script>
+    <!-- <script src="js/navform.js"></script> -->
+
+    <!-- jQuery easing plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
+</body>
+
+</html>
