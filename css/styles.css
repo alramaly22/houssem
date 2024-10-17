@@ -2289,3 +2289,13 @@
         position: fixed;
         z-index: 1000;
     }
+    
+    .watsappicona {
+        margin-right: 6px;
+        margin-left: 6px;
+    }
+    
+    .mo {
+        font-size: 17px;
+        color: yellowgreen;
+    }
