@@ -150,9 +150,8 @@ let lang = {
         Instructions8: "تحاليل الكبد",
         Instructions9: "تحاليل الكلى",
         Instructions10: "تحاليل الغدة الدرقية",
-        Instructions11: "بمجرد الانتهاء من إرسال جميع المعلومات والصور، سيتم دراسة التحاليل من قبل الكوتش وسيتم التواصل معك لمزيد من التفاصيل."
-
-
+        Instructions11: "بمجرد الانتهاء من إرسال جميع المعلومات والصور، سيتم دراسة التحاليل من قبل الكوتش وسيتم التواصل معك لمزيد من التفاصيل.",
+        button10: "إرسال إلى الدردشة"
     },
     en: {
         nav1: "Home",
@@ -317,6 +316,7 @@ let lang = {
         Instructions9: "Kidney analyses",
         Instructions10: "Thyroid analyses",
         Instructions11: "Once you have sent all the information and pictures, the coach will review the analyses, and you will be contacted for further details.",
+        button10: "Send To Chat",
     }
 };
 
